@@ -8,6 +8,10 @@
         margin: auto;
         padding-inline: $pad;
         flex-flow: row wrap;
+
+        p{
+                max-width: 40ch;
+        }
 }
 
 .right{
@@ -19,5 +23,12 @@
 .left{
         h1{
                 text-transform: capitalize;
+                font-size: pixTOrem(42px);
+        }
+        .wrapper:first-child{
+                margin-top: pixTOrem(40px);
+        }
+        .wrapper + .wrapper{
+                margin-top: pixTOrem(24px);
         }
 }

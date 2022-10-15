@@ -85,6 +85,13 @@ main {
   margin-top: 3.75rem;
 }
 
+.contain {
+  max-width: 71.25rem;
+  justify-content: space-between;
+  margin: auto;
+  padding-inline: 32px;
+}
+
 header {
   padding-block: 1.25rem;
   background-color: rgb(255, 255, 255);
@@ -112,6 +119,9 @@ header nav .nav-list a {
   padding-inline: 32px;
   flex-flow: row wrap;
 }
+.about-me p {
+  max-width: 40ch;
+}
 
 .right img {
   width: 25rem;
@@ -120,6 +130,13 @@ header nav .nav-list a {
 
 .left h1 {
   text-transform: capitalize;
+  font-size: 2.625rem;
+}
+.left .wrapper:first-child {
+  margin-top: 2.5rem;
+}
+.left .wrapper + .wrapper {
+  margin-top: 1.5rem;
 }
 
 @media (max-width: 991.98px) {
