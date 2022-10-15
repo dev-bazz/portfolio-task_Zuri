@@ -1,35 +1,92 @@
 @use "./functions" as *;
 @use "./component/nav";
-@use  "./variables" as *;
+@use "./variables" as *;
+@use "./media" as *;
 
-.about-me{
+.about-me {
         max-width: pixTOrem(1140px);
         justify-content: space-between;
         margin: auto;
         padding-inline: $pad;
         flex-flow: row wrap;
 
-        p{
+        @include xsm {
+                flex-flow: column wrap;
+                align-items: center;
+        }
+
+        p {
                 max-width: 40ch;
+        }
+
+        .right {
+                img {
+                        width: pixTOrem(400px);
+                        min-width: pixTOrem(60px);
+                }
+        }
+
+        .left {
+                h1 {
+                        text-transform: capitalize;
+                        font-size: pixTOrem(42px);
+                        color: $dark-primary;
+                }
+
+                .wrapper:first-child {
+                        margin-top: pixTOrem(40px);
+                }
+
+                .wrapper+.wrapper {
+                        margin-top: pixTOrem(24px);
+                }
         }
 }
 
-.right{
-        img{
-                width: pixTOrem(400px);
-                min-width: pixTOrem(60px);
+.projects-done {
+        background-color: $dark-primary;
+        padding: pixTOrem(24px) pixTOrem(16px);
+        #pro{
+                display: flex;
+                align-items: center !important;
+                height: 100%;
+                flex-wrap: wrap;
+                align-items: center;
+                .lists {
+                        li {
+                                list-style: square url("../img/🦆 icon _Check_.svg") inside;
+                        }
+                }
         }
+        h1 {
+                color: white;
+                font-size: pixTOrem(32px);
+                font-weight: 500;
+        }
+        color: rgb(239, 239, 239);
+
 }
-.left{
-        h1{
-                text-transform: capitalize;
-                font-size: pixTOrem(42px);
-                color: $dark-primary;
+
+.services {
+        background-color: rgb(228, 234, 238);
+        padding: pixTOrem(24px) pixTOrem(16px);
+        #pro{
+                display: flex;
+                align-items: center !important;
+                height: 100%;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                .lists {
+                        li {
+                                list-style: square  inside;
+                        }
+                }
         }
-        .wrapper:first-child{
-                margin-top: pixTOrem(40px);
+        h1 {
+                color: rgb(33, 33, 33);
+                font-size: pixTOrem(32px);
+                font-weight: 500;
         }
-        .wrapper + .wrapper{
-                margin-top: pixTOrem(24px);
-        }
+        color: rgb(65, 65, 65);
 }

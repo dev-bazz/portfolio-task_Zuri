@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&display=swap");
 /* Box sizing rules */
 *,
@@ -89,7 +90,7 @@ main {
   max-width: 71.25rem;
   justify-content: space-between;
   margin: auto;
-  padding-inline: 32px;
+  padding-inline: 16px;
 }
 
 header {
@@ -98,9 +99,9 @@ header {
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.158);
 }
 header nav {
-  max-width: calc(71.25rem - 32px);
+  max-width: calc(71.25rem - 16px);
   margin: auto;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
 }
 header nav .nav-list {
   display: flex;
@@ -114,34 +115,6 @@ header nav .nav-list a {
 }
 header nav .nav-list a:hover {
   color: #8752DD;
-}
-
-.about-me {
-  max-width: 71.25rem;
-  justify-content: space-between;
-  margin: auto;
-  padding-inline: 32px;
-  flex-flow: row wrap;
-}
-.about-me p {
-  max-width: 40ch;
-}
-
-.right img {
-  width: 25rem;
-  min-width: 3.75rem;
-}
-
-.left h1 {
-  text-transform: capitalize;
-  font-size: 2.625rem;
-  color: #422B70;
-}
-.left .wrapper:first-child {
-  margin-top: 2.5rem;
-}
-.left .wrapper + .wrapper {
-  margin-top: 1.5rem;
 }
 
 @media (max-width: 991.98px) {
@@ -158,6 +131,122 @@ header nav .nav-list a:hover {
   :root {
     font-size: 10px;
   }
+}
+.about-me {
+  max-width: 71.25rem;
+  justify-content: space-between;
+  margin: auto;
+  padding-inline: 16px;
+  flex-flow: row wrap;
+}
+@media (max-width: 575.98px) {
+  .about-me {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
+.about-me p {
+  max-width: 40ch;
+}
+.about-me .right img {
+  width: 25rem;
+  min-width: 3.75rem;
+}
+.about-me .left h1 {
+  text-transform: capitalize;
+  font-size: 2.625rem;
+  color: #422B70;
+}
+.about-me .left .wrapper:first-child {
+  margin-top: 2.5rem;
+}
+.about-me .left .wrapper + .wrapper {
+  margin-top: 1.5rem;
+}
+
+.projects-done {
+  background-color: #422B70;
+  padding: 1.5rem 1rem;
+  color: rgb(239, 239, 239);
+}
+.projects-done #pro {
+  display: flex;
+  align-items: center !important;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.projects-done #pro .lists li {
+  list-style: square url("../img/🦆 icon _Check_.svg") inside;
+}
+.projects-done h1 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.services {
+  background-color: rgb(228, 234, 238);
+  padding: 1.5rem 1rem;
+  color: rgb(65, 65, 65);
+}
+.services #pro {
+  display: flex;
+  align-items: center !important;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.services #pro .lists li {
+  list-style: square inside;
+}
+.services h1 {
+  color: rgb(33, 33, 33);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+form {
+  border: solid rgba(0, 0, 0, 0.349);
+  border-width: 0.2em;
+  border-radius: 8px;
+  padding: 1.8em 6em;
+  width: clamp(3em, 100%, 29em);
+  color: #422B70;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20vh;
+  border: 1px solid black;
+}
+form .contact-btn {
+  padding-inline: 4em;
+  border-width: 0;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: all ease-in 200ms;
+}
+form .contact-btn:hover {
+  transform-origin: center center;
+  background-color: #422B70;
+  transition: all ease-out 500ms;
+  transform: translateY(1em);
+}
+form .input {
+  flex-direction: column;
+}
+form .input input,
+form .input textarea {
+  padding: 0.2em 0.4em;
+}
+form #message {
+  resize: none;
+  height: 5rem;
+}
+form .form-title {
+  color: #422B70;
+  font-size: #422B70;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,45 @@
+@use "./variables" as *;
+
+form {
+        border: solid rgba(0, 0, 0, 0.349);
+        border-width: 0.2em;
+        border-radius: 8px;
+        padding: 1.8em 6em;
+        width: clamp(3em, 100%, 29em);
+        color: $dark-primary;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20vh;
+border: 1px solid black;
+        .contact-btn {
+                
+                padding-inline: 4em;
+                border-width: 0;
+                cursor: pointer;
+                transform-origin: center center;
+                transition: all ease-in 200ms;
+                &:hover {
+                        transform-origin: center center;
+                        background-color: $dark-primary;
+                        transition: all ease-out 500ms;
+                        transform: translateY(1em);
+                }
+        }
+        .input {
+                flex-direction: column;
+                input,
+                textarea {
+                        padding: 0.2em 0.4em;
+                }
+        }
+        #message {
+                resize: none;
+                height: 5rem;
+        }
+
+        .form-title {
+                color: $dark-primary;
+                font-size: $dark-primary;
+        }
+}
