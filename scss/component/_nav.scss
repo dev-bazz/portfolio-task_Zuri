@@ -1,0 +1,24 @@
+@use '../functions' as *;
+
+header{
+        padding-block: pixTOrem(16px);
+        background-color: aquamarine;
+
+        nav{
+        // content wrapper
+        max-width: pixTOrem(1140px);
+        margin: auto;
+        padding-inline: pixTOrem(16px);
+        
+
+        .nav-list{
+                display: flex;
+                justify-content: flex-end;
+                gap: pixTOrem(20px, em);
+                a{
+                        text-decoration: none;
+                }
+        }
+}
+
+}
