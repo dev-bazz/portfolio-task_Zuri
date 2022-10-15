@@ -24,6 +24,7 @@
         h1{
                 text-transform: capitalize;
                 font-size: pixTOrem(42px);
+                color: $dark-primary;
         }
         .wrapper:first-child{
                 margin-top: pixTOrem(40px);

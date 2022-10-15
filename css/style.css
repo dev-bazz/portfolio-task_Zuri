@@ -110,6 +110,10 @@ header nav .nav-list {
 header nav .nav-list a {
   text-decoration: none;
   font-weight: 600;
+  color: #422B70;
+}
+header nav .nav-list a:hover {
+  color: #8752DD;
 }
 
 .about-me {
@@ -131,6 +135,7 @@ header nav .nav-list a {
 .left h1 {
   text-transform: capitalize;
   font-size: 2.625rem;
+  color: #422B70;
 }
 .left .wrapper:first-child {
   margin-top: 2.5rem;
