@@ -1,2 +1,23 @@
 @use "./functions" as *;
 @use "./component/nav";
+@use  "./variables" as *;
+
+.about-me{
+        max-width: pixTOrem(1140px);
+        justify-content: space-between;
+        margin: auto;
+        padding-inline: $pad;
+        flex-flow: row wrap;
+}
+
+.right{
+        img{
+                width: pixTOrem(400px);
+                min-width: pixTOrem(60px);
+        }
+}
+.left{
+        h1{
+                text-transform: capitalize;
+        }
+}

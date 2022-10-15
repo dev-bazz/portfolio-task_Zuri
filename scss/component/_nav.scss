@@ -1,21 +1,24 @@
 @use '../functions' as *;
+@use '../variables' as *;
 
 header{
-        padding-block: pixTOrem(16px);
-        background-color: aquamarine;
+        padding-block: pixTOrem(20px);
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.158);
 
         nav{
         // content wrapper
-        max-width: pixTOrem(1140px);
+        max-width: calc(pixTOrem(1140px) - $pad);
         margin: auto;
-        padding-inline: pixTOrem(16px);
-        
+        padding-inline: pixTOrem($pad);
+
         .nav-list{
                 display: flex;
                 justify-content: flex-end;
                 gap: pixTOrem(20px, em);
                 a{
                         text-decoration: none;
+                        font-weight: 600;
                 }
         }
         }
